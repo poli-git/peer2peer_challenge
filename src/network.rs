@@ -1,4 +1,4 @@
-use crate::codec::BitcoinCodec;
+
 use crate::config;
 use crate::errors::ConnectionError;
 use std::net::SocketAddr;
@@ -16,7 +16,7 @@ use tokio_util::codec::Framed;
 
 pub async fn connect(
     remote_address: &SocketAddr,
-) -> Result<Framed<TcpStream, BitcoinCodec>, ConnectionError> {
+) -> Result<Framed<TcpStream, crate::codec::BitcoinCodec>, ConnectionError> {
     let config = config::build();
     let connection = TcpStream::connect(remote_address).map_err(ConnectionError::ConnectionFailed);
 
@@ -28,13 +28,13 @@ pub async fn connect(
     .map_err(ConnectionError::ConnectionTimedOut)
     .await??;
 
-    let framed = Framed::new(stream, BitcoinCodec {});
+    let framed = Framed::new(stream, crate::quick_challenge::codec::BitcoinCodec {});
     Ok(framed)
 }
 
 /// Perform a Bitcoin handshake as per [this protocol documentation](https://en.bitcoin.it/wiki/Protocol_documentation)
 pub async fn perform_handshake(
-    stream: &mut Framed<TcpStream, BitcoinCodec>,
+    stream: &mut Framed<TcpStream, crate::codec::BitcoinCodec>,
     peer_address: &SocketAddr,
     local_address: &SocketAddr,
 ) -> Result<(), ConnectionError> {
