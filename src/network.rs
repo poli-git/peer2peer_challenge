@@ -1,5 +1,6 @@
 
 use crate::config;
+use crate::codec::BitcoinCodec;
 use crate::errors::ConnectionError;
 use std::net::SocketAddr;
 
@@ -28,7 +29,8 @@ pub async fn connect(
     .map_err(ConnectionError::ConnectionTimedOut)
     .await??;
 
-    let framed = Framed::new(stream, crate::quick_challenge::codec::BitcoinCodec {});
+    
+    let framed = Framed::new(stream, codec::BitcoinCodec {});
     Ok(framed)
 }
 
