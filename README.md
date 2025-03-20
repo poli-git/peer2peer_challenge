@@ -6,7 +6,7 @@ Here is a simple Rust binary project performing a handshake with a Bitcoin node.
 
 Considering step 2 will consist in using this code to write a Bitcoin network crawler, **perform a code review on this project**. List what you like about it and what you don't. Describe how easy to read and how maintainable this code is. Mention where the code isn't the most idiomatic, ergonomic or reliable. Suggest fixes and adjustements (no need to actually fix these, just suggest the fixes). Treat it like a pull request. 
 
-Write your findings in the `step1.md` file, and submit it to us **within the time limit**.
+Write findings in the `step1.md` file
 
 ## Step 2: Feature implementation
 
