@@ -15,3 +15,11 @@ Write findings in the `step1.md` file
 Be aware that retrieving these addresses may take up to a minute and that some nodes may only give you a single peer address on the first try and a second try might be required. You won't need to validate that all these addresses correspond to responsive nodes, but you'll need to crawl some of those in order to get 5000 peers. We especially recommend you don't even try to connect to ipv6 and Tor addresses.
 
 For the sake of facilitating review and saving you time and effort, please refrain from fixing all the rough edges you noticed during the review unless you really feel this is necessary, and focus on the crawling feature.
+
+## Optional step 3: 
+
+_Make it work. Make it right. **Make it fast**_
+
+Without writing actual code, please describe in a few sentences how you would improve and scale your solution to collect the most nodes in the shortest time. Mention the methods and tools you would use.
+
+Put your ideas in `step3.md` or leave comments in your code from step 2. 
