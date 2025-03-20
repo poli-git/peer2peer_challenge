@@ -14,6 +14,4 @@ Write findings in the `step1.md` file
 
 Be aware that retrieving these addresses may take up to a minute and that some nodes may only give you a single peer address on the first try and a second try might be required. You won't need to validate that all these addresses correspond to responsive nodes, but you'll need to crawl some of those in order to get 5000 peers. We especially recommend you don't even try to connect to ipv6 and Tor addresses.
 
-For the sake of facilitating our review and saving you time and effort, please refrain from fixing all the rough edges you noticed during the review unless you really feel this is necessary, and focus on the crawling feature.
-
-We encourage you to take advantage of the fact this directory is a git repository. You can stay on the main branch.
+For the sake of facilitating review and saving you time and effort, please refrain from fixing all the rough edges you noticed during the review unless you really feel this is necessary, and focus on the crawling feature.
