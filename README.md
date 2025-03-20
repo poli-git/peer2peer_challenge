@@ -10,9 +10,9 @@ Write findings in the `step1.md` file
 
 ## Step 2: Feature implementation
 
-**Extend this program with a new feature: network crawling. Make it so this program can collect the addresses of 5000 peers.** 
+**Extend this program with a new feature: network crawling.** 
 
-Be aware that retrieving these addresses may take up to a minute and that some nodes may only give you a single peer address on the first try and a second try might be required. You won't need to validate that all these addresses correspond to responsive nodes, but you'll need to crawl some of those in order to get 5000 peers. We especially recommend you don't even try to connect to ipv6 and Tor addresses.
+Be aware that retrieving these addresses may take up to a minute and that some nodes may only give you a single peer address on the first try and a second try might be required. You won't need to validate that all these addresses correspond to responsive nodes, but you'll need to crawl some of those in order to get more peers. We especially recommend you don't even try to connect to ipv6 and Tor addresses.
 
 For the sake of facilitating review and saving you time and effort, please refrain from fixing all the rough edges you noticed during the review unless you really feel this is necessary, and focus on the crawling feature.
 
