@@ -18,7 +18,7 @@ use trace_log::init_tracing;
 struct Args {
     /// The address of the node to reach to.
     /// `dig seed.bitcoin.sipa.be +short` may provide a fresh list of nodes.
-    #[arg(short, long, default_value = "86.89.77.44:8333")]
+    #[arg(short, long, default_value = "103.246.186.138:8333")]
     remote_address: String,
 
     /// The address of this local node.
